@@ -50,7 +50,6 @@ public class UserServiceImpl implements UserService {
     }
 
     private List<User> parseCSVFile(MultipartFile file) {
-        long start = System.currentTimeMillis();
         BufferedReader br;
         List<User> userList = new ArrayList<>();
         try {
