@@ -5,6 +5,7 @@
 #m3
 #m4
 #m5
+#feature1
 name: Java CI with Maven
 
 on:
