@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CompletableFuture;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
@@ -28,11 +29,24 @@ public class UserServiceImpl implements UserService {
 
     @Override
     @Async
-    public void saveUser(MultipartFile file) {
-
+    public CompletableFuture<List<User>> saveUser(MultipartFile file) {
+        long start = System.currentTimeMillis();
+        System.out.println("Thread name :"+Thread.currentThread().getName());
         List<User> userList = parseCSVFile(file);
         repository.saveAll(userList);
+        System.out.println("Time taken by method:: " + ( System.currentTimeMillis() - start));
+        return CompletableFuture.completedFuture(userList);
 
+    }
+
+    @Override
+    public List<User> saveUsers(MultipartFile file) {
+        long start = System.currentTimeMillis();
+        System.out.println("Thread name :"+Thread.currentThread().getName());
+        List<User> userList = parseCSVFile(file);
+        repository.saveAll(userList);
+        System.out.println("Time taken by method:: " + ( System.currentTimeMillis() - start));
+        return userList;
     }
 
     private List<User> parseCSVFile(MultipartFile file) {
