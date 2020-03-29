@@ -4,6 +4,7 @@
 #m2
 #m3
 #m4
+#m5
 name: Java CI with Maven
 
 on:
