@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.io.IOException;
+import java.text.Format;
 
 /**
  * @author vivek.agrawal
@@ -29,6 +30,7 @@ public class ContentController {
 
 	@GetMapping("/content")
 	public String content(@RequestParam String city) throws IOException, SolrServerException {
+		//Format format = new Format()
 
 		HttpSolrClient solr = new HttpSolrClient.Builder(urlString).build();
 		solr.setParser(new XMLResponseParser());
