@@ -10,3 +10,16 @@ jdbc url: jdbc:h2:mem:testdb
 
 Link: https://www.youtube.com/watch?v=3rJBLFA95Io
 http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
+
+
+<b>Design Patterns</b>
+<ul>
+   <li>Creational Pattern </li>
+         <ul> 
+            <li> Singleton Pattern </li>
+            <li> Builder Pattern </li>
+            <li> Prototype Pattern </li>
+            <li> Factory Pattern </li>
+            <li> Abstract Pattern </li>
+         </ul>   
+</ul>   
