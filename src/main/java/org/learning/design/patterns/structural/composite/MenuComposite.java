@@ -12,13 +12,15 @@ public class MenuComposite implements IMenuComponent {
     private String name;
     private String title;
 
-    private List<IMenuComponent> arrayList =  null;
+    private List<IMenuComponent> arrayList =  new ArrayList<>();
 
-    public MenuComposite(String title, List<IMenuComponent> arrayList) {
+    public MenuComposite(String title) {
         this.title = title;
-        this.arrayList = arrayList;
     }
 
+    public void addList(IMenuComponent item){
+        arrayList.add(item);
+    }
 
     @Override
     public String toString() {
@@ -38,6 +40,27 @@ public class MenuComposite implements IMenuComponent {
 
     @Override
     public String getHtml() {
-        return null;
+        StringBuilder sb = new StringBuilder();
+        sb.append("<ul>");
+        sb.append("<li>");
+        sb.append(title);
+        sb.append("</li>");
+        Iterator<IMenuComponent> iterator = arrayList.iterator();
+
+        if(iterator.hasNext()){
+            sb.append("<ul>");
+        }
+
+        while(iterator.hasNext()){
+            IMenuComponent menu = iterator.next();
+            sb.append(menu.getHtml());
+
+            if(!iterator.hasNext()){
+                sb.append("</ul>");
+            }
+        }
+        sb.append("</ul>");
+
+        return sb.toString();
     }
 }

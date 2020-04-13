@@ -10,16 +10,14 @@ public class MenuTest {
 
     @Test
     public void test(){
-     /*   MenuComposite m1 = new MenuComposite("M1","Title 1");
-        MenuComposite m2 = new MenuComposite("M2","Title 2");
-        MenuComposite m3 = new MenuComposite("M3","Title 3");
-        MenuComposite m4 = new MenuComposite("M4","Title 4");
-        MenuComposite m5 = new MenuComposite("M5","Title 5");
+       MenuComposite m1 = new MenuComposite("Beverage");
+        LeafComponent m2 = new LeafComponent("Coffee");
+        LeafComponent m3 = new LeafComponent("Tea");
+        LeafComponent m4 = new LeafComponent("Milk");
         m1.addList(m2);
         m1.addList(m3);
-        m2.addList(m5);
-        m3.addList(m4);
-        System.out.println(m1.toString());*/
+        m1.addList(m4);
+        System.out.println(m1.getHtml());
     }
 
 }
