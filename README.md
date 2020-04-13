@@ -12,7 +12,7 @@ Link: https://www.youtube.com/watch?v=3rJBLFA95Io
 http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
 
 
-<b>Design Patterns</b>
+<b><u>Design Patterns</u></b>
 <ul>
    <li>Creational Pattern </li>
          <ul> 
@@ -22,4 +22,11 @@ http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
             <li> Factory Pattern </li>
             <li> Abstract Pattern </li>
          </ul>   
+   <li>Structural Pattern </li>
+      <ul>
+          <li> Composite Pattern - Tree Structure, Leaf Component + Menu Component </li>
+          <li> Adapter Pattern - Takes the Adaptee to implement new request </li>
+          <li> Decorator Pattern - Aggregation and Composition</li>
+      </ul>   
+   
 </ul>   
