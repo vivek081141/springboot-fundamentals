@@ -1,6 +1,6 @@
 package org.learning.multithreading.multithreading.main;
 
-import org.learning.multithreading.multithreading.advanced.ThreadUsingExecuterPoolStrategy;
+import org.learning.multithreading.multithreading.advanced.ThreadUsingExecutorPoolStrategy;
 import org.learning.multithreading.multithreading.basics.ThreadRunner;
 import org.learning.multithreading.multithreading.basics.ThreadStrategy;
 
@@ -21,7 +21,7 @@ public class MainClass {
         Map<String,Object> config = new HashMap<>();
         config.put("FILE_SIZE",10);
         config.put("FILE_PREFIX","/Users/i350472/workspace/springboot/SpringBootSpringDataSolr/src/main/resources/INPUT_MOCK_DATA_0");
-        ThreadStrategy strategy = new ThreadUsingExecuterPoolStrategy(config);
+        ThreadStrategy strategy = new ThreadUsingExecutorPoolStrategy(config);
         ThreadRunner runner = new ThreadRunner(strategy);
         runner.run();
 

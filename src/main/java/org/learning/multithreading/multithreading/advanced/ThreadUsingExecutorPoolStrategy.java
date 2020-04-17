@@ -18,9 +18,9 @@ import java.util.concurrent.Executors;
 //996 using 10 thread
 //1139 using 1 thread
 //1071 using no thread
-public class ThreadUsingExecuterPoolStrategy extends BaseThread implements ThreadStrategy {
+public class ThreadUsingExecutorPoolStrategy extends BaseThread implements ThreadStrategy {
 
-    public ThreadUsingExecuterPoolStrategy(Map<String, Object> config) {
+    public ThreadUsingExecutorPoolStrategy(Map<String, Object> config) {
        super(config);
     }
 
