@@ -16,11 +16,11 @@ http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
 <ul>
    <li>Creational Pattern </li>
          <ul> 
-            <li> Singleton Pattern </li>
-            <li> Builder Pattern </li>
-            <li> Prototype Pattern </li>
-            <li> Factory Pattern </li>
-            <li> Abstract Pattern </li>
+            <li> Singleton Pattern: Threadsafe, early(static),lazy loading </li>
+            <li> Builder Pattern: Building immutable objects </li>
+            <li> Prototype Pattern: To create objects from a map of objects or from a pool of objects </li>
+            <li> Factory Pattern: Factory pattern to create objects </li>
+            <li> Abstract Pattern: Factory of factory </li>
          </ul>   
    <li>Structural Pattern </li>
       <ul>
@@ -28,5 +28,8 @@ http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
           <li> Adapter Pattern - Takes the Adaptee to implement new request </li>
           <li> Decorator Pattern - Aggregation and Composition</li>
       </ul>   
-   
+   <li>Behaviour Pattern </li>
+   <ul>
+          <li> Strategy Pattern - Basic Thread and Advanced Thread Execution</li>
+   </ul>
 </ul>   
