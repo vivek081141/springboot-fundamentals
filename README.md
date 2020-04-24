@@ -31,7 +31,9 @@ http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
    <li>Behaviour Pattern </li>
    <ul>
           <li> Strategy Pattern - Basic Thread and Advanced Thread Execution</li>
-          <li> Command Pattern - Invoker encapsulates Command. Command encapsutes Reciever.
-             Reciever is FileSystem and Commands are OpenCommand, Read and Close File System</li>
+          <li> Command Pattern - Invoker encapsulates Command. Command encapsulates Receiver.
+             Receiver is FileSystem and Commands are OpenCommand, Read and Close File System</li>
+          <li> Chain Of responsibility: Email is sent to the appropriate department, 
+          department forwards it to next if its not applicable</li>   
    </ul>
 </ul>   
