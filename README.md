@@ -31,5 +31,7 @@ http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
    <li>Behaviour Pattern </li>
    <ul>
           <li> Strategy Pattern - Basic Thread and Advanced Thread Execution</li>
+          <li> Command Pattern - Invoker encapsulates Command. Command encapsutes Reciever.
+             Reciever is FileSystem and Commands are OpenCommand, Read and Close File System</li>
    </ul>
 </ul>   
