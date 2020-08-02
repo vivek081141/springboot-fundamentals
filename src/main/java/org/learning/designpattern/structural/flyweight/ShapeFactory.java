@@ -9,6 +9,7 @@ package org.learning.designpattern.structural.flyweight;
 import java.util.HashMap;
 import java.util.Map;
 
+/** Demo at FlyweightPatternDemo **/
 public class ShapeFactory {
 
     private static Map<String,Shape> hashMap = new HashMap();
