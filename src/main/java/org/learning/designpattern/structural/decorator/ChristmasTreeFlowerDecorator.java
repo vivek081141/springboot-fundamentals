@@ -6,6 +6,7 @@
 
 package org.learning.designpattern.structural.decorator;
 
+/** Demo present in ChristmasTreeDecoratorTest **/
 public class ChristmasTreeFlowerDecorator extends ChristmasTreeDecorator {
 
     public ChristmasTreeFlowerDecorator(IChristmasTree christmasTree){

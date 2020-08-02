@@ -19,9 +19,9 @@ public class SSHServiceImpl implements SSHService {
 
     @Override
     public void downloadFile(PatchingRequest request) {
-        String host="app1132.lab1.ariba.com";
+        String host="";
         String user="anlq2";
-        String password="Trx3qLJO0Zkx";
+        String password="";
         String remoteScpCommand="scp /home/anlq2/DF72.zip";//   /home/anlq2/DF72.zip
         String directory = "/home/anlq2/DF72.zip";
         try{
