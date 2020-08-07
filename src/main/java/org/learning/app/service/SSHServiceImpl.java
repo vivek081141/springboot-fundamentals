@@ -17,44 +17,44 @@ import org.springframework.stereotype.Service;
 public class SSHServiceImpl implements SSHService {
 
 
-    @Override
-    public void downloadFile(PatchingRequest request) {
-        String host="";
-        String user="anlq2";
-        String password="";
-        String remoteScpCommand="scp /home/anlq2/DF72.zip";//   /home/anlq2/DF72.zip
-        String directory = "/home/anlq2/DF72.zip";
-        try{
-            //scp anlq2@app1132.lab1.ariba.com:/home/anlq2/DF72.zip
-            java.util.Properties config = new java.util.Properties();
-            config.put("StrictHostKeyChecking", "no");
-            JSch jsch = new JSch();
-            Session session=jsch.getSession(user, host, 22);
-                session.setPassword(password);
-            session.setConfig(config);
-            session.connect();
-            System.out.println("Connected");
+  @Override
+  public void downloadFile(PatchingRequest request) {
+    String host = "";
+    String user = "anlq2";
+    String password = "";
+    String remoteScpCommand = "scp /home/anlq2/DF72.zip"; //   /home/anlq2/DF72.zip
+    String directory = "/home/anlq2/DF72.zip";
+    try {
+      //scp anlq2@app1132.lab1.ariba.com:/home/anlq2/DF72.zip
+      java.util.Properties config = new java.util.Properties();
+      config.put("StrictHostKeyChecking", "no");
+      JSch jsch = new JSch();
+      Session session = jsch.getSession(user, host, 22);
+      session.setPassword(password);
+      session.setConfig(config);
+      session.connect();
+      System.out.println("Connected");
 
-            Channel channel=session.openChannel("sftp");
-            channel.connect();
+      Channel channel = session.openChannel("sftp");
+      channel.connect();
 
-            ChannelSftp sftp = (ChannelSftp) channel;
-            sftp.cd(directory);
-            sftp.get("/home/anlq2/DF72.zip","/Users/i350472/Downloads/DF72.zip");
+      ChannelSftp sftp = (ChannelSftp) channel;
+      sftp.cd(directory);
+      sftp.get("/home/anlq2/DF72.zip", "/Users/i350472/Downloads/DF72.zip");
 
-            Boolean success = true;
+      Boolean success = true;
 
-            if(success){
-                // The file has been succesfully downloaded
-            }
+      if (success) {
+        // The file has been succesfully downloaded
+      }
 
-            channel.disconnect();
-            session.disconnect();
+      channel.disconnect();
+      session.disconnect();
 
-        }catch(Exception e){
-            e.printStackTrace();
-        }
+    } catch (Exception e) {
+      e.printStackTrace();
     }
+  }
 
 
 

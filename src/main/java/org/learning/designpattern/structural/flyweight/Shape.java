@@ -7,5 +7,5 @@
 package org.learning.designpattern.structural.flyweight;
 
 public interface Shape {
-    void draw();
+  void draw();
 }

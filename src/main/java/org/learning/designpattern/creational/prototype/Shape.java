@@ -8,5 +8,5 @@ package org.learning.designpattern.creational.prototype;
 
 public interface Shape {
 
-    public Double getArea();
+  public Double getArea();
 }

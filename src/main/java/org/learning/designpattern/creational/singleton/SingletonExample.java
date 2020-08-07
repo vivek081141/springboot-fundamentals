@@ -6,6 +6,7 @@
 
 package org.learning.designpattern.creational.singleton;
 
+import edu.umd.cs.findbugs.annotations.SuppressFBWarnings;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,23 +14,25 @@ import org.slf4j.LoggerFactory;
  * This singleton pattern is tested by SingletonExampleTest using Executors
  */
 public class SingletonExample {
-    private static final Logger logger = LoggerFactory.getLogger(SingletonExample.class);
+  private static final Logger logger = LoggerFactory.getLogger(SingletonExample.class);
 
-    private static SingletonExample _instance;
+  @SuppressWarnings("checkstyle:StaticVariableName")
+  private static SingletonExample instance;
 
-    private SingletonExample(){
-        //please dont create a new instance
-    }
+  private SingletonExample() {
+    //please dont create a new instance
+  }
 
-    public static SingletonExample getInstance(){
-        if(_instance == null){
-            synchronized (SingletonExample.class){
-                if(_instance == null){
-                    logger.info("New Object is being created.");
-                    _instance = new SingletonExample();
-                }
-            }
+  @SuppressFBWarnings("DC_DOUBLECHECK")
+  public static SingletonExample getInstance() {
+    if (instance == null) {
+      synchronized (SingletonExample.class) {
+        if (instance == null) {
+          logger.info("New Object is being created.");
+          instance = new SingletonExample();
         }
-        return _instance;
+      }
     }
+    return instance;
+  }
 }

@@ -15,27 +15,29 @@ import java.util.List;
 
 public class LambdaBasics {
 
-  /** List should be sorted **/
+  /**
+   * List should be sorted
+   **/
   public void comparator01(List<Person> list) {
     Collections.sort(list, new PersonComparator());
   }
 
-  public void comparator02( List<Person> list) {
-    Collections.sort( list, new Comparator<Person>() {
+  public void comparator02(List<Person> list) {
+    Collections.sort(list, new Comparator<Person>() {
       @Override
       public int compare(Person p1, Person p2) {
         return (int) (p1.getSalary() - p2.getSalary());
       }
-    } );
+    });
   }
 
-  public void comparator03( List<Person> list) {
+  public void comparator03(List<Person> list) {
     Comparator<Person> salaryComparator = (p1, p2) -> (int) (p1.getSalary() - p2.getSalary());
-    Collections.sort( list, salaryComparator );
+    Collections.sort(list, salaryComparator);
   }
 
-  public void comparator003( List<Person> list) {
-    Collections.sort( list, (p1, p2) -> salaryComparator( p1, p2 ));
+  public void comparator003(List<Person> list) {
+    Collections.sort(list, (p1, p2) -> salaryComparator(p1, p2));
   }
 
   public int salaryComparator(Person p1, Person p2) {
@@ -43,9 +45,9 @@ public class LambdaBasics {
   }
 
 
-  public void comparator04( List<Person> list) {
-    Comparator<Person> nameComparator = Comparator.comparing( Person::getSalary );
-    Collections.sort( list, nameComparator );
+  public void comparator04(List<Person> list) {
+    Comparator<Person> nameComparator = Comparator.comparing(Person::getSalary);
+    Collections.sort(list, nameComparator);
   }
 
   @FunctionalInterface
@@ -57,7 +59,7 @@ public class LambdaBasics {
 
     @Override
     public void say() {
-      comparator04( new ArrayList<>());
+      comparator04(new ArrayList<>());
     }
   }
 
@@ -72,11 +74,11 @@ public class LambdaBasics {
   }
 
   public void comparator07() {
-    ISayable sayable = () -> comparator04(new ArrayList<>() );
+    ISayable sayable = () -> comparator04(new ArrayList<>());
     sayable.say();
   }
 
-  public static void saySomething(){
+  public static void saySomething() {
     System.out.println("Hello, this is static method.");
   }
 }

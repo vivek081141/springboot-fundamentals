@@ -9,18 +9,18 @@ package org.learning.designpattern.behaviour.commands;
 import org.learning.designpattern.behaviour.commands.command.ICommand;
 
 /**
- *  This is perfect exacmple of decoupling
- *  The invoker does not know anything about the implementation
+ * This is perfect exacmple of decoupling
+ * The invoker does not know anything about the implementation
  */
 public class CommandInvoker {
 
-    private ICommand command;
+  private ICommand command;
 
-    public CommandInvoker(ICommand command){
-        this.command = command;
-    }
+  public CommandInvoker(ICommand command) {
+    this.command = command;
+  }
 
-    public void buttonClicked(){
-        command.execute();
-    }
+  public void buttonClicked() {
+    command.execute();
+  }
 }

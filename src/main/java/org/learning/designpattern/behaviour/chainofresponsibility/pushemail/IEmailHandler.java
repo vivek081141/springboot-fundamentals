@@ -7,7 +7,7 @@
 package org.learning.designpattern.behaviour.chainofresponsibility.pushemail;
 
 public interface IEmailHandler {
-    void setSuccessor(IEmailHandler emailHandler);
+  void setSuccessor(IEmailHandler emailHandler);
 
-    void handleRequest(EmailType emailType);
+  void handleRequest(EmailType emailType);
 }

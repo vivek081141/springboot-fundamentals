@@ -7,5 +7,5 @@
 package org.learning.designpattern.behaviour.chainofresponsibility.pushemail;
 
 public enum EmailType {
-    COMPLAINT, SPAM, FAN, SUGGESTION
+  COMPLAINT, SPAM, FAN, SUGGESTION
 }

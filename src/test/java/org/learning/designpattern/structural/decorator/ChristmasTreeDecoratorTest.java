@@ -15,11 +15,11 @@ import org.junit.Test;
 
 public class ChristmasTreeDecoratorTest {
 
-    @Test
-    public void test(){
-        IChristmasTree tree = new ChristmasTree();
-        IChristmasTree decoratorTree = new ChristmasTreeDecorator(tree);
-        IChristmasTree advDecoratorTree = new ChristmasTreeFlowerDecorator(decoratorTree);
-        System.out.println(advDecoratorTree.decorateTree());
-    }
+  @Test
+  public void test() {
+    IChristmasTree tree = new ChristmasTree();
+    IChristmasTree decoratorTree = new ChristmasTreeDecorator(tree);
+    IChristmasTree advDecoratorTree = new ChristmasTreeFlowerDecorator(decoratorTree);
+    System.out.println(advDecoratorTree.decorateTree());
+  }
 }

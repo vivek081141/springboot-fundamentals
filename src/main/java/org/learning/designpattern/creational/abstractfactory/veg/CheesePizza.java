@@ -10,8 +10,8 @@ import org.learning.designpattern.creational.abstractfactory.Pizza;
 
 public class CheesePizza implements Pizza {
 
-    @Override
-    public String getName() {
-        return "Cheese Pizza";
-    }
+  @Override
+  public String getName() {
+    return "Cheese Pizza";
+  }
 }

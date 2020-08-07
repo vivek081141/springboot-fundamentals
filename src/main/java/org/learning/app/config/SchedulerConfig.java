@@ -14,15 +14,15 @@ import org.springframework.scheduling.config.ScheduledTaskRegistrar;
 @Configuration
 @EnableScheduling
 public class SchedulerConfig implements SchedulingConfigurer {
-    private final int POOL_SIZE = 10;
+  private final int size = 10;
 
-    @Override
-    public void configureTasks(ScheduledTaskRegistrar scheduledTaskRegistrar) {
-        ThreadPoolTaskScheduler threadPoolTaskScheduler = new ThreadPoolTaskScheduler();
-        threadPoolTaskScheduler.setPoolSize(POOL_SIZE);
-        threadPoolTaskScheduler.setThreadNamePrefix("my-scheduled-task-pool-");
-        threadPoolTaskScheduler.initialize();
-        scheduledTaskRegistrar.setTaskScheduler(threadPoolTaskScheduler);
-        //threadPoolTaskScheduler.scheduleAtFixedRate(new RunnableTask("Specific time, 3 Seconds from now"),1000);
-    }
+  @Override
+  public void configureTasks(ScheduledTaskRegistrar scheduledTaskRegistrar) {
+    ThreadPoolTaskScheduler threadPoolTaskScheduler = new ThreadPoolTaskScheduler();
+    threadPoolTaskScheduler.setPoolSize(size);
+    threadPoolTaskScheduler.setThreadNamePrefix("my-scheduled-task-pool-");
+    threadPoolTaskScheduler.initialize();
+    scheduledTaskRegistrar.setTaskScheduler(threadPoolTaskScheduler);
+    //threadPoolTaskScheduler.scheduleAtFixedRate(new RunnableTask("Specific time, 3 Seconds from now"),1000);
+  }
 }

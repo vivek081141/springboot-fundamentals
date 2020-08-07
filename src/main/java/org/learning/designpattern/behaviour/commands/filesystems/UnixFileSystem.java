@@ -12,20 +12,20 @@
 
 package org.learning.designpattern.behaviour.commands.filesystems;
 
-public class UnixFileSystem extends AbstractFileSystem{
+public class UnixFileSystem extends AbstractFileSystem {
 
-    @Override
-    public void openFile() {
+  @Override
+  public void openFile() {
 
-    }
+  }
 
-    @Override
-    public void readFile() {
+  @Override
+  public void readFile() {
 
-    }
+  }
 
-    @Override
-    public void closeFile() {
+  @Override
+  public void closeFile() {
 
-    }
+  }
 }

@@ -18,6 +18,6 @@
 
 package org.learning.designpattern.behaviour.strategy.runner;
 
-public interface IRunnable extends Runnable{
-        void setFileName(String fileName);
+public interface IRunnable extends Runnable {
+  void setFileName(String fileName);
 }

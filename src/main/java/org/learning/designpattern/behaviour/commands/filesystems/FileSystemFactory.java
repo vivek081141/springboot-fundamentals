@@ -14,19 +14,19 @@ package org.learning.designpattern.behaviour.commands.filesystems;
 
 public class FileSystemFactory {
 
-    public static FileSystem getInstance(String type){
-        FileSystem fileSystem = null;
-        switch ( type ){
-            case "WIN":
-                fileSystem = new WindowsFileSystem();
-                break;
-            case "UNIX":
-                fileSystem = new UnixFileSystem();
-                break;
-            default:
-                fileSystem = new MacFileSystem();
+  public static FileSystem getInstance(String type) {
+    FileSystem fileSystem = null;
+    switch (type) {
+      case "WIN":
+        fileSystem = new WindowsFileSystem();
+        break;
+      case "UNIX":
+        fileSystem = new UnixFileSystem();
+        break;
+      default:
+        fileSystem = new MacFileSystem();
 
-        }
-        return fileSystem;
     }
+    return fileSystem;
+  }
 }

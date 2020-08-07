@@ -10,8 +10,8 @@
  *
  */
 
-package org.learning.designpattern.behaviour.chainofresponsibility.duplicateCheck;
+package org.learning.designpattern.behaviour.chainofresponsibility.duplicatecheck;
 
 public enum MatchConstants {
-    DUNS,EMAIL,NORMAL,NO_MATCH
+  DUNS, EMAIL, NORMAL, NO_MATCH
 }

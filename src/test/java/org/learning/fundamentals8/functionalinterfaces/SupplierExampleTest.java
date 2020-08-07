@@ -19,7 +19,7 @@ public class SupplierExampleTest {
   }
 
   @Test
-  public void supplierWithOptional(){
+  public void supplierWithOptional() {
     Supplier<Double> doubleSupplier = () -> Math.random();
     Optional<Double> optionalDouble = Optional.empty();
     System.out.println(optionalDouble.orElseGet(doubleSupplier));

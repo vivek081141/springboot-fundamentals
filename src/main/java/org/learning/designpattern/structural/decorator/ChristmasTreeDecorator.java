@@ -6,16 +6,16 @@
 
 package org.learning.designpattern.structural.decorator;
 
-public class ChristmasTreeDecorator implements IChristmasTree{
+public class ChristmasTreeDecorator implements IChristmasTree {
 
-    protected IChristmasTree christmasTree;
+  protected IChristmasTree christmasTree;
 
-    public ChristmasTreeDecorator(IChristmasTree christmasTree){
-        this.christmasTree = christmasTree;
-    }
+  public ChristmasTreeDecorator(IChristmasTree christmasTree) {
+    this.christmasTree = christmasTree;
+  }
 
-    @Override
-    public String decorateTree() {
-        return christmasTree.decorateTree() + "Adding the light bulbs.";
-    }
+  @Override
+  public String decorateTree() {
+    return christmasTree.decorateTree() + "Adding the light bulbs.";
+  }
 }

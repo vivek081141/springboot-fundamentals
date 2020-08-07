@@ -18,21 +18,20 @@ import org.junit.Test;
  * 1. new Object(this) to create a new object by passing the parameter in the constructor
  * 2. Shallow Copy - should not be used as it doesn't create new instance
  * 3. Deep Copy - using serialization and deserialization
- *
  */
 public class PrototypeDemoTest {
 
-    @Test
-    public void test(){
+  @Test
+  public void test() {
 
-        Rectangle rectangle = new Rectangle();
-        rectangle.setX(2);
-        rectangle.setY(5);
-        Assert.assertEquals(10,rectangle.getArea().doubleValue(),0);
+    Rectangle rectangle = new Rectangle();
+    rectangle.setX(2);
+    rectangle.setY(5);
+    Assert.assertEquals(10, rectangle.getArea().doubleValue(), 0);
 
-        Rectangle newRectangle = rectangle.clone();
-        newRectangle.setX(10);
-        Assert.assertEquals(50,newRectangle.getArea().doubleValue(),0);
+    Rectangle newRectangle = rectangle.clone();
+    newRectangle.setX(10);
+    Assert.assertEquals(50, newRectangle.getArea().doubleValue(), 0);
 
-    }
+  }
 }

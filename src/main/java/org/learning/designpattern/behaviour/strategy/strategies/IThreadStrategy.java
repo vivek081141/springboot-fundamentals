@@ -20,5 +20,5 @@ package org.learning.designpattern.behaviour.strategy.strategies;
 
 public interface IThreadStrategy {
 
-    public void execute();
+  public void execute();
 }

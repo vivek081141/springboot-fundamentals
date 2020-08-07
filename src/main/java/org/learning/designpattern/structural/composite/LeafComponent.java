@@ -7,14 +7,14 @@
 package org.learning.designpattern.structural.composite;
 
 public class LeafComponent implements IMenuComponent {
-    private String text;
+  private String text;
 
-    public LeafComponent(String text){
-        this.text = text;
-    }
+  public LeafComponent(String text) {
+    this.text = text;
+  }
 
-    @Override
-    public String getHtml() {
-        return "<li>"+text+"</li>";
-    }
+  @Override
+  public String getHtml() {
+    return "<li>" + text + "</li>";
+  }
 }

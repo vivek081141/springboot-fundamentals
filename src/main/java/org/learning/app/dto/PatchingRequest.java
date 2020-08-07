@@ -6,64 +6,64 @@
 
 package org.learning.app.dto;
 
-import javax.validation.constraints.NotNull;
 import java.util.List;
+import javax.validation.constraints.NotNull;
 
 public class PatchingRequest {
 
-    @NotNull(message = "This is error message")
-    private String serviceName;
-    private List<String> serverName;
-    private String password;
-    private String fileName;
-    private String path;
-    private String downloadPath;
+  @NotNull(message = "This is error message")
+  private String serviceName;
+  private List<String> serverName;
+  private String password;
+  private String fileName;
+  private String path;
+  private String downloadPath;
 
-    public String getServiceName() {
-        return serviceName;
-    }
+  public String getServiceName() {
+    return serviceName;
+  }
 
-    public void setServiceName(String serviceName) {
-        this.serviceName = serviceName;
-    }
+  public void setServiceName(String serviceName) {
+    this.serviceName = serviceName;
+  }
 
-    public List<String> getServerName() {
-        return serverName;
-    }
+  public List<String> getServerName() {
+    return serverName;
+  }
 
-    public void setServerName(List<String> serverName) {
-        this.serverName = serverName;
-    }
+  public void setServerName(List<String> serverName) {
+    this.serverName = serverName;
+  }
 
-    public String getPassword() {
-        return password;
-    }
+  public String getPassword() {
+    return password;
+  }
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+  public void setPassword(String password) {
+    this.password = password;
+  }
 
-    public String getFileName() {
-        return fileName;
-    }
+  public String getFileName() {
+    return fileName;
+  }
 
-    public void setFileName(String fileName) {
-        this.fileName = fileName;
-    }
+  public void setFileName(String fileName) {
+    this.fileName = fileName;
+  }
 
-    public String getPath() {
-        return path;
-    }
+  public String getPath() {
+    return path;
+  }
 
-    public void setPath(String path) {
-        this.path = path;
-    }
+  public void setPath(String path) {
+    this.path = path;
+  }
 
-    public String getDownloadPath() {
-        return downloadPath;
-    }
+  public String getDownloadPath() {
+    return downloadPath;
+  }
 
-    public void setDownloadPath(String downloadPath) {
-        this.downloadPath = downloadPath;
-    }
+  public void setDownloadPath(String downloadPath) {
+    this.downloadPath = downloadPath;
+  }
 }

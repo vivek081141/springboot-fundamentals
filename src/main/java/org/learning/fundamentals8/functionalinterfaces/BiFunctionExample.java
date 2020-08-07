@@ -14,13 +14,10 @@ import java.util.Map;
 public class BiFunctionExample {
 
   public void mapTest() {
-    Map<Integer, List<Person>> map1 = Map.of(
-            12, Arrays.asList(new Person("Vivek", 2000)),
-            13, Arrays.asList(new Person("MkYong", 3000))
-    );
+    Map<Integer, List<Person>> map1 = Map.of(12, Arrays.asList(new Person("Vivek", 2000)), 13, Arrays.asList(new Person("MkYong", 3000)));
 
-    map1.forEach( (key,personList) -> {
-      personList.forEach( (person) -> System.out.println(key+"-->"+person.toString()) );
+    map1.forEach((key, personList) -> {
+      personList.forEach((person) -> System.out.println(key + "-->" + person.toString()));
     });
 
 

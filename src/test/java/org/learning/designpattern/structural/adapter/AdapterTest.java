@@ -15,9 +15,9 @@ import org.junit.Test;
  */
 public class AdapterTest {
 
-    @Test
-    public void test(){
-        IAdapter adapter = new Adapter(new Adaptee());
-        adapter.newRequest();
-    }
+  @Test
+  public void test() {
+    IAdapter adapter = new Adapter(new Adaptee());
+    adapter.newRequest();
+  }
 }

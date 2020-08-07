@@ -1,9 +1,8 @@
 package org.learning.app.multithreading.advanced;
 
 import org.learning.app.multithreading.basics.BaseThread;
-import org.learning.app.multithreading.workers.CSVFileHandler;
 import org.learning.app.multithreading.basics.ThreadStrategy;
-
+import org.learning.app.multithreading.workers.CSVFileHandler;
 import java.util.Map;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -20,25 +19,25 @@ import java.util.concurrent.Executors;
 //1071 using no thread
 public class ThreadUsingExecutorPoolStrategy extends BaseThread implements ThreadStrategy {
 
-    public ThreadUsingExecutorPoolStrategy(Map<String, Object> config) {
-       super(config);
-    }
+  public ThreadUsingExecutorPoolStrategy(Map<String, Object> config) {
+    super(config);
+  }
 
-    @Override
-    public void execute() {
-        long time = System.currentTimeMillis();
-        ExecutorService executorService = Executors.newFixedThreadPool(5);
+  @Override
+  public void execute() {
+    long time = System.currentTimeMillis();
+    ExecutorService executorService = Executors.newFixedThreadPool(5);
 
-        for(int i=0;i<100;i++){
-            CSVFileHandler handler = new CSVFileHandler();
-            handler.inputFile = filePrefix+0+".csv";
-            handler.outPutFile = filePrefix+0+".txt";
-            //handler.run(); //303
-            executorService.execute(handler);
-        }
-        executorService.shutdown();
-        while (!executorService.isTerminated()) {
-        }
-        System.out.println("JOb COMPLETED: Total Time " + (System.currentTimeMillis() - time ));
+    for (int i = 0; i < 100; i++) {
+      CSVFileHandler handler = new CSVFileHandler();
+      handler.inputFile = filePrefix + 0 + ".csv";
+      handler.outPutFile = filePrefix + 0 + ".txt";
+      //handler.run(); //303
+      executorService.execute(handler);
     }
+    executorService.shutdown();
+    while (!executorService.isTerminated()) {
+    }
+    System.out.println("JOb COMPLETED: Total Time " + (System.currentTimeMillis() - time));
+  }
 }

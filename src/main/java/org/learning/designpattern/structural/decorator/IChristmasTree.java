@@ -7,5 +7,5 @@
 package org.learning.designpattern.structural.decorator;
 
 public interface IChristmasTree {
-    String decorateTree();
+  String decorateTree();
 }

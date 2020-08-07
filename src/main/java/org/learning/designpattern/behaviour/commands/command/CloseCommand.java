@@ -9,14 +9,14 @@ package org.learning.designpattern.behaviour.commands.command;
 import org.learning.designpattern.behaviour.commands.filesystems.FileSystem;
 
 public class CloseCommand implements ICommand {
-    FileSystem fileSystem;
+  FileSystem fileSystem;
 
-    public CloseCommand(FileSystem fileSystem){
-        this.fileSystem = fileSystem;
-    }
+  public CloseCommand(FileSystem fileSystem) {
+    this.fileSystem = fileSystem;
+  }
 
-    @Override
-    public void execute() {
-        fileSystem.closeFile();
-    }
+  @Override
+  public void execute() {
+    fileSystem.closeFile();
+  }
 }

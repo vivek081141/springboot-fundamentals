@@ -8,5 +8,5 @@ package org.learning.designpattern.structural.composite;
 
 public interface IMenuComponent {
 
-    public String getHtml();
+  public String getHtml();
 }

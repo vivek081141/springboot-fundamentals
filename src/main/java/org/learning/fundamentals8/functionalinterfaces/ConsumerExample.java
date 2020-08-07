@@ -11,19 +11,23 @@ import java.util.stream.Stream;
 
 public class ConsumerExample {
 
-  /** Input T, Output Nothing **/
+  /**
+   * Input T, Output Nothing
+   **/
 
   public void test() {
-    Consumer<String> consumer = x-> System.out.println(x);
-    Stream<String> cities = Stream.of( "Bangalore" , "Mumbai", "Delhi", "Chennai" );
+    Consumer<String> consumer = x -> System.out.println(x);
+    Stream<String> cities = Stream.of("Bangalore", "Mumbai", "Delhi", "Chennai");
     cities.forEach(consumer);
   }
 
 
-  /** all the foreach loop overrides consumer accept function **/
+  /**
+   * all the foreach loop overrides consumer accept function
+   **/
   public void enhancedTest() {
-    Stream<String> cities = Stream.of( "Bangalore" , "Mumbai", "Delhi", "Chennai" );
-    cities.forEach( x -> System.out.println() );
+    Stream<String> cities = Stream.of("Bangalore", "Mumbai", "Delhi", "Chennai");
+    cities.forEach(x -> System.out.println());
   }
 
   public void test02() {
@@ -34,7 +38,7 @@ public class ConsumerExample {
       }
     };
 
-    Stream<String> cities = Stream.of( "Bangalore" , "Mumbai", "Delhi", "Chennai" );
-    cities.forEach( consumer );
+    Stream<String> cities = Stream.of("Bangalore", "Mumbai", "Delhi", "Chennai");
+    cities.forEach(consumer);
   }
 }

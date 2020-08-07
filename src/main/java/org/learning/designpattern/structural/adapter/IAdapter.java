@@ -7,5 +7,5 @@
 package org.learning.designpattern.structural.adapter;
 
 public interface IAdapter {
-    void newRequest();
+  void newRequest();
 }

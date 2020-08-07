@@ -10,8 +10,8 @@
  *
  */
 
-package org.learning.designpattern.behaviour.chainofresponsibility.duplicateCheck;
+package org.learning.designpattern.behaviour.chainofresponsibility.duplicatecheck;
 
 public interface MatchHandler {
-    void match(MatchConstants matchConstants);
+  void match(MatchConstants matchConstants);
 }

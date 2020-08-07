@@ -7,8 +7,8 @@
 package org.learning.designpattern.structural.flyweight;
 
 import org.junit.Test;
-
 import java.io.IOException;
+import java.util.Random;
 
 /**
  * Flyweight Example taken from tutorial point
@@ -18,28 +18,30 @@ import java.io.IOException;
  * Overall NO LEARNING
  */
 public class FlyweightPatternDemo {
-    private static final String colors[] = { "Red", "Green", "Blue", "White", "Black" };
+  private static final String colors[] = {"Red", "Green", "Blue", "White", "Black"};
+  private static Random random = new Random();
+  @Test
+  public void test() throws IOException {
+    for (int i = 0; i < 20; ++i) {
+      //I would like all my objects to be immutable
+      Circle circle = (Circle) ShapeFactory.getCircle(colors[0]);
+      circle.setX(getRandomX());
+      circle.setY(getRandomY());
+      circle.setRadius(100);
+      circle.draw();
 
-    @Test
-    public void test() throws IOException {
-        for(int i=0; i < 20; ++i) {
-            //I would like all my objects to be immutable
-            Circle circle = (Circle)ShapeFactory.getCircle(colors[0]);
-            circle.setX(getRandomX());
-            circle.setY(getRandomY());
-            circle.setRadius(100);
-            circle.draw();
+    }
+  }
 
-        }
-    }
+  private static String getRandomColor() {
+    return colors[(int) (Math.random() * colors.length)];
+  }
 
-    private static String getRandomColor() {
-        return colors[(int)(Math.random()*colors.length)];
-    }
-    private static int getRandomX() {
-        return (int)(Math.random()*100 );
-    }
-    private static int getRandomY() {
-        return (int)(Math.random()*100);
-    }
+  private static int getRandomX() {
+    return random.nextInt() * 100;
+  }
+
+  private static int getRandomY() {
+    return random.nextInt() * 100;
+  }
 }

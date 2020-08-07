@@ -8,9 +8,9 @@ package org.learning.designpattern.structural.decorator;
 
 public class ChristmasTree implements IChristmasTree {
 
-    @Override
-    public String decorateTree(){
-        return "This is decorated Tree.";
-    }
+  @Override
+  public String decorateTree() {
+    return "This is decorated Tree.";
+  }
 
 }

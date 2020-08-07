@@ -4,12 +4,12 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.learning</groupId>
-	<artifactId>SpringBootSpringDataMultithreadingExample</artifactId>
+	<artifactId>SpringBootMultiThreadingApp</artifactId>
 	<version>0.0.1-RELEASE</version>
 	<packaging>jar</packaging>
 
-	<name>SpringBootMultiThreading App</name>
-	<description>SpringBootSpringData Multithreading App</description>
+	<name>Spring Boot Samples</name>
+	<description>SpringBoot Java8 and multithreading Samples</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -24,6 +24,7 @@
 		<java.version>1.8</java.version>
 	</properties>
 
+
 	<dependencies>
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson/jackson-bom -->
 
@@ -32,17 +33,6 @@
 		    <groupId>org.springframework.boot</groupId>
 		    <artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
-		<dependency>
-			<groupId>com.fasterxml.jackson</groupId>
-			<artifactId>jackson-bom</artifactId>
-			<version>2.8.11.20180608</version>
-		</dependency>
-
-		<!--<dependency>
-			<groupId>org.springframework.boot</groupId>mvn
-			<artifactId>spring-boot-starter-data-solr</artifactId>
-		</dependency>-->
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -78,7 +68,14 @@
 			<artifactId>jsch</artifactId>
 			<version>0.1.53</version>
 		</dependency>
+		<dependency>
+			<groupId>com.github.spotbugs</groupId>
+			<artifactId>spotbugs-annotations</artifactId>
+			<version>3.1.8</version>
+			<scope>compile</scope>
+		</dependency>
 	</dependencies>
+
 
 	<build>
 		<plugins>
@@ -94,8 +91,62 @@
 					<target>9</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.1.1</version>
+				<configuration>
+					<configLocation>checkstyle.xml</configLocation>
+					<propertyExpansion>suppressionFile=${project.basedir}/suppressions.xml</propertyExpansion>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<!-- mvn spotbugs:spotbugs -->
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>3.1.8</version>
+				<!--<executions>
+					<execution>
+						<goals>
+							<goal>check</goal>
+						</goals>
+					</execution>
+				</executions>-->
+			</plugin>
+
 		</plugins>
 	</build>
+
+	<reporting>
+		<plugins>
+
+			<!-- unable to generate checkstyle error -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-checkstyle-plugin</artifactId>
+				<version>3.1.1</version>
+				<configuration>
+					<configLocation>checkstyle.xml</configLocation>
+					<propertyExpansion>suppressionFile=${project.basedir}/suppressions.xml</propertyExpansion>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>com.github.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<version>3.1.8</version>
+			</plugin>
+
+		</plugins>
+	</reporting>
 
 	<repositories>
 		<repository>

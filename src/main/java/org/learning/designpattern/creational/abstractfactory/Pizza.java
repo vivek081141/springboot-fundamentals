@@ -8,5 +8,5 @@ package org.learning.designpattern.creational.abstractfactory;
 
 public interface Pizza {
 
-    public String getName();
+  public String getName();
 }

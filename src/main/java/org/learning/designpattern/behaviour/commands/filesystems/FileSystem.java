@@ -14,7 +14,9 @@ package org.learning.designpattern.behaviour.commands.filesystems;
 
 public interface FileSystem {
 
-    public void openFile();
-    public void readFile();
-    public void closeFile();
+  public void openFile();
+
+  public void readFile();
+
+  public void closeFile();
 }

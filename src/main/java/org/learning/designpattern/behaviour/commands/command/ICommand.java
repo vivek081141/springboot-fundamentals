@@ -8,5 +8,5 @@ package org.learning.designpattern.behaviour.commands.command;
 
 public interface ICommand {
 
-    public void execute();
+  public void execute();
 }

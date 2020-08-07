@@ -14,18 +14,18 @@ package org.learning.designpattern.behaviour.commands.filesystems;
 
 public class WindowsFileSystem extends AbstractFileSystem {
 
-    @Override
-    public void openFile() {
+  @Override
+  public void openFile() {
 
-    }
+  }
 
-    @Override
-    public void readFile() {
+  @Override
+  public void readFile() {
 
-    }
+  }
 
-    @Override
-    public void closeFile() {
+  @Override
+  public void closeFile() {
 
-    }
+  }
 }

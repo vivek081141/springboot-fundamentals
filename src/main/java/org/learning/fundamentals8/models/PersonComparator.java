@@ -6,9 +6,10 @@
 
 package org.learning.fundamentals8.models;
 
+import java.io.Serializable;
 import java.util.Comparator;
 
-public class PersonComparator implements Comparator<Person> {
+public class PersonComparator implements Comparator<Person>, Serializable {
 
   @Override
   public int compare(Person p1, Person p2) {

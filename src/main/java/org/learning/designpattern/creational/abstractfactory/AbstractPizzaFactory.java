@@ -8,7 +8,7 @@ package org.learning.designpattern.creational.abstractfactory;
 
 public abstract class AbstractPizzaFactory {
 
-    public abstract Pizza create(String type);
+  public abstract Pizza create(String type);
 
 
    /* public static AbstractPizzaFactory getPizzaFactory(String type){

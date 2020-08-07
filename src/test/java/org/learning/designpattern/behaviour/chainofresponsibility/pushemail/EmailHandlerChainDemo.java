@@ -10,20 +10,20 @@ import org.junit.Test;
 
 public class EmailHandlerChainDemo {
 
-    @Test
-    public void handleEmail(){
+  @Test
+  public void handleEmail() {
 
-        IEmailHandler suggestionHandler = new SuggestionHandler();
-        IEmailHandler complaintHandler = new ComplaintHandler();
-        IEmailHandler fanEmailHandler = new FanEmailHandler();
+    IEmailHandler suggestionHandler = new SuggestionHandler();
+    IEmailHandler complaintHandler = new ComplaintHandler();
+    IEmailHandler fanEmailHandler = new FanEmailHandler();
 
-        suggestionHandler.setSuccessor(complaintHandler);
-        complaintHandler.setSuccessor(fanEmailHandler);
+    suggestionHandler.setSuccessor(complaintHandler);
+    complaintHandler.setSuccessor(fanEmailHandler);
 
-        suggestionHandler.handleRequest(EmailType.COMPLAINT);
-        suggestionHandler.handleRequest(EmailType.SUGGESTION);
-        suggestionHandler.handleRequest(EmailType.FAN);
+    suggestionHandler.handleRequest(EmailType.COMPLAINT);
+    suggestionHandler.handleRequest(EmailType.SUGGESTION);
+    suggestionHandler.handleRequest(EmailType.FAN);
 
 
-    }
+  }
 }

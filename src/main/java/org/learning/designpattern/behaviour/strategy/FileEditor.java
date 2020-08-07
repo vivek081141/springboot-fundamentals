@@ -15,13 +15,13 @@ package org.learning.designpattern.behaviour.strategy;
 import org.learning.designpattern.behaviour.strategy.strategies.IThreadStrategy;
 
 public class FileEditor {
-    private IThreadStrategy executionStrategy;
+  private IThreadStrategy executionStrategy;
 
-    public FileEditor(IThreadStrategy executionStrategy) {
-       this.executionStrategy = executionStrategy;
-    }
+  public FileEditor(IThreadStrategy executionStrategy) {
+    this.executionStrategy = executionStrategy;
+  }
 
-    public void performTask() {
-        this.executionStrategy.execute();
-    }
+  public void performTask() {
+    this.executionStrategy.execute();
+  }
 }
