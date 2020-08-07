@@ -17,7 +17,7 @@ import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class CSVFileHandler implements Runnable{
+public class CSVFileHandler implements Runnable {
     public String inputFile;
     public String outPutFile;
 
@@ -57,7 +57,6 @@ public class CSVFileHandler implements Runnable{
     }
 
     private Function<String, User> mapToItem = (line) -> {
-        Map<String,User> map = new HashMap<>();
         String[] p = line.split(",");// a CSV has comma separated lines
         User item = new User();
         item.id = p[0];//<-- this is the first column in the csv file

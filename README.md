@@ -37,3 +37,7 @@ http://tutorials.jenkov.com/java-util-concurrent/executorservice.html
           department forwards it to next if its not applicable</li>   
    </ul>
 </ul>   
+
+
+Java 8
+1. Spliterator

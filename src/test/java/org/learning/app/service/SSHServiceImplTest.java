@@ -12,7 +12,6 @@ import com.jcraft.jsch.JSch;
 import com.jcraft.jsch.JSchException;
 import com.jcraft.jsch.Session;
 import com.jcraft.jsch.SftpException;
-import org.apache.commons.io.IOUtils;
 import org.junit.Test;
 
 import java.io.BufferedReader;
@@ -49,7 +48,7 @@ public class SSHServiceImplTest {
             System.out.println("Starting File download");
             //channelSftp.
             InputStream is = channelSftp.get(fileName);
-            IOUtils.copy(is, System.out);
+           // IOUtils.copy(is, System.out);
             is.close();
 
         } catch (JSchException | SftpException exception) {
