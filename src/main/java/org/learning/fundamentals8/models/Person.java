@@ -6,6 +6,13 @@
 
 package org.learning.fundamentals8.models;
 
+import lombok.Getter;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@ToString
 public class Person {
   private String name;
   private float salary;
@@ -18,24 +25,4 @@ public class Person {
     this.salary = salary;
   }
 
-  public String getName() {
-    return name;
-  }
-
-  public void setName(String name) {
-    this.name = name;
-  }
-
-  public float getSalary() {
-    return salary;
-  }
-
-  public void setSalary(float salary) {
-    this.salary = salary;
-  }
-
-  @Override
-  public String toString() {
-    return "Person{" + "name='" + name + '\'' + ", salary=" + salary + '}';
-  }
 }
