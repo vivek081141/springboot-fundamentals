@@ -89,7 +89,35 @@
 				<configuration>
 					<source>9</source>
 					<target>9</target>
+					<release>11</release>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>test-jar</goal>
+						</goals>
+						<!-- This plugin runs 2 times for some reason, so cannot override default phase -->
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.2.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+						<!--<phase>package</phase>-->
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -104,6 +132,8 @@
 						<goals>
 							<goal>check</goal>
 						</goals>
+						<!-- goal can be tied to mvn phase -->
+						<phase>install</phase>
 					</execution>
 				</executions>
 			</plugin>
@@ -113,6 +143,9 @@
 				<groupId>com.github.spotbugs</groupId>
 				<artifactId>spotbugs-maven-plugin</artifactId>
 				<version>3.1.8</version>
+				<!--<configuration>
+					<configLocation>code-style.xml</configLocation>
+				</configuration>-->
 				<!--<executions>
 					<execution>
 						<goals>
