@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.learning</groupId>
-	<artifactId>SpringBootMultiThreadingApp</artifactId>
+	<artifactId>Spring Fundamentals</artifactId>
 	<version>0.0.1-RELEASE</version>
 	<packaging>jar</packaging>
 

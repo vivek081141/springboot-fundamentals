@@ -9,6 +9,10 @@ package org.learning.fundamentals8.functionalinterfaces;
 import java.util.List;
 import java.util.function.Predicate;
 
+/**
+ * Predicate is a functional interface which
+ * implements a single function which returns a boolean
+ */
 public class PredicateExample {
 
   public List<String> removeElement(List<String> list, String element) {
