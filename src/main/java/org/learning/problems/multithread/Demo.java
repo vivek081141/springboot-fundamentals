@@ -1,8 +1,10 @@
 package org.learning.problems.multithread;
 
 
+import java.util.LinkedList;
+
 /**
- * SharedResource is used by Producer and Consumer both,
+ * SharedResource (linkedList) is used by Producer and Consumer both,
  * producer will keep adding to shared resources,
  * consumer will keep consuming data
  *
@@ -15,16 +17,16 @@ public class Demo {
 
   public static void main(String[] args) {
 
-    SharedResource resource = new SharedResource();
+    LinkedList<String> linkedList = new LinkedList<>();
 
     for (int i = 0; i < 10; i++) {
-      ProducerThread thread = new ProducerThread(resource);
+      ProducerThread thread = new ProducerThread(linkedList);
       thread.setName("Thread " + i);
       thread.start();
     }
 
     for (int i = 0; i < 1; i++) {
-      ConsumerThread consumerThread = new ConsumerThread(resource);
+      ConsumerThread consumerThread = new ConsumerThread(linkedList);
       consumerThread.setName("Thread " + i);
       consumerThread.start();
 
