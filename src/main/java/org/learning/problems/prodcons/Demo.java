@@ -1,4 +1,4 @@
-package org.learning.problems.multithread;
+package org.learning.problems.prodcons;
 
 
 import java.util.LinkedList;
