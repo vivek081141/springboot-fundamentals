@@ -10,4 +10,10 @@ public class ImmutableCustomerTest {
     ImmutableCustomer customer = new ImmutableCustomer.Builder().addId("12345").addName("Vivek").build();
     Assert.assertEquals("12345", customer.getId());
   }
+
+  @Test
+  public void test2() {
+    ImmutablePerson customer = new ImmutablePerson.Builder().addName("12345").build();
+    Assert.assertEquals("12345", customer.getName());
+  }
 }

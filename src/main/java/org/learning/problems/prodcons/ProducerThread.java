@@ -2,7 +2,7 @@ package org.learning.problems.prodcons;
 
 import java.util.LinkedList;
 
-public class ProducerThread extends Thread{
+public class ProducerThread extends Thread {
 
   int capacity = 20;
   private LinkedList<String> list;
@@ -17,14 +17,14 @@ public class ProducerThread extends Thread{
   public void run() {
     try {
       while (true) {
-        synchronized (this){
+        synchronized (this) {
           //handle full condition
           while (list.size() == capacity) {
             wait();
           }
 
           Double random = Math.random();
-          System.out.println("This element is produced by Thread:: "+ Thread.currentThread().getName() +" element:: " + random);
+          System.out.println("This element is produced by Thread:: " + Thread.currentThread().getName() + " element:: " + random);
           list.push(random.toString());
 
           //notify to consumer
