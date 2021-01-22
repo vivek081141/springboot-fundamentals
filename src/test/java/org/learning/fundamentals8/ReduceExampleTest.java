@@ -9,6 +9,7 @@ package org.learning.fundamentals8;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.learning.java8.ReduceExample;
 
 public class ReduceExampleTest {
 

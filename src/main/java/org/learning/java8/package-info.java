@@ -4,4 +4,4 @@
  * This is to contain all Java 8 related changes along with test cases.
  */
 
-package org.learning.fundamentals8;
+package org.learning.java8;

@@ -4,10 +4,10 @@
  *
  */
 
-package org.learning.fundamentals8;
+package org.learning.java8;
 
-import org.learning.fundamentals8.models.Person;
-import org.learning.fundamentals8.util.ModelMock;
+import org.learning.java8.models.Person;
+import org.learning.java8.util.ModelMock;
 import java.util.Arrays;
 import java.util.List;
 

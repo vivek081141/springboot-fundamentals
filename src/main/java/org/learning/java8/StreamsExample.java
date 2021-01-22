@@ -4,7 +4,7 @@
  *
  */
 
-package org.learning.fundamentals8;
+package org.learning.java8;
 
 import java.util.List;
 import java.util.function.Function;

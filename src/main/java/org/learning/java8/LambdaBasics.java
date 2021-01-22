@@ -4,10 +4,10 @@
  *
  */
 
-package org.learning.fundamentals8;
+package org.learning.java8;
 
-import org.learning.fundamentals8.models.Person;
-import org.learning.fundamentals8.models.PersonComparator;
+import org.learning.java8.models.Person;
+import org.learning.java8.models.PersonComparator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;

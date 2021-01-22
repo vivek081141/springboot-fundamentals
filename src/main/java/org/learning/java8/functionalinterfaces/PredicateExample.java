@@ -4,7 +4,7 @@
  *
  */
 
-package org.learning.fundamentals8.functionalinterfaces;
+package org.learning.java8.functionalinterfaces;
 
 import java.util.List;
 import java.util.function.Predicate;

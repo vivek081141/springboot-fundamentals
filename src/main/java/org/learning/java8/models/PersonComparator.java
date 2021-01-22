@@ -4,7 +4,7 @@
  *
  */
 
-package org.learning.fundamentals8.models;
+package org.learning.java8.models;
 
 import java.io.Serializable;
 import java.util.Comparator;

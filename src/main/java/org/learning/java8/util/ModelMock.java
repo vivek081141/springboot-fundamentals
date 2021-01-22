@@ -4,9 +4,9 @@
  *
  */
 
-package org.learning.fundamentals8.util;
+package org.learning.java8.util;
 
-import org.learning.fundamentals8.models.Person;
+import org.learning.java8.models.Person;
 import java.util.ArrayList;
 import java.util.List;
 

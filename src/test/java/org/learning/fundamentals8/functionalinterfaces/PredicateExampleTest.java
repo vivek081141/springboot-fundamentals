@@ -8,6 +8,7 @@ package org.learning.fundamentals8.functionalinterfaces;
 
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.learning.java8.functionalinterfaces.PredicateExample;
 import java.util.Arrays;
 import java.util.List;
 

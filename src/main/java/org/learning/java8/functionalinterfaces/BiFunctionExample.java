@@ -4,9 +4,9 @@
  *
  */
 
-package org.learning.fundamentals8.functionalinterfaces;
+package org.learning.java8.functionalinterfaces;
 
-import org.learning.fundamentals8.models.Person;
+import org.learning.java8.models.Person;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;

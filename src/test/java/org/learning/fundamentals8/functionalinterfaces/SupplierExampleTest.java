@@ -7,6 +7,7 @@
 package org.learning.fundamentals8.functionalinterfaces;
 
 import org.junit.Test;
+import org.learning.java8.functionalinterfaces.SupplierExample;
 import java.util.Optional;
 import java.util.function.Supplier;
 

@@ -9,7 +9,8 @@ package org.learning.fundamentals8;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.learning.fundamentals8.models.Person;
+import org.learning.java8.FlatMapExample;
+import org.learning.java8.models.Person;
 import java.util.List;
 
 public class FlatMapExampleTest {
